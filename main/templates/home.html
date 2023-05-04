@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Домашня сторінка</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Домашня сторінка</h1>
+        </header>
+        <main>
+            <p class="intro-text">{{ welcome_text }}</p>
+            <p>{{ intro_text }}</p>
+            <p>{{ body_text }}</p>
+        </main>
+        <footer class="footer">
+            &copy; 2023 My Website
+        </footer>
+    </div>
+</body>
+</html>

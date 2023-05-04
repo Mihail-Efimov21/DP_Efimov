@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+	<title>Web CV - Efimov Mihail</title>
+	<style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    margin: 5;
+    max-width: 4000px;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  h1 {
+    
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  .intro-text {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .footer {
+    height: 60px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+	margin-top:212px;
+    color: #fff;
+    padding: 20px;
+    
+    text-align: center;
+  }
+    </style>
+</head>
+
+<body>
+	<header><h1>Web CV - Efimov Mihail</h1></header>
+	
+
+	<aside>
+		<h2>Phone number</h2>
+		{% for phone_number in phone_numbers %}
+			<p>{{ phone_number }}</p>
+		{% endfor %}
+	</aside>
+
+	<main>
+		<section>
+			<h2>Summary</h2>
+			<p>{{ summary }}</p>
+		</section>
+
+		<section>
+			<h2>Education</h2>
+			{% for edu in education %}
+				<p>{{ edu }}</p>
+			{% endfor %}
+		</section>
+
+		<section>
+			<h2>Work Experience</h2>
+			<p>{{ work_experience }}</p>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		&copy; 2023 My Website
+	</footer>
+</body>
+
+</html>
